@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports: 
+      - 8086:8086
+    volumes:
+      - /home/docker/influxdb:/root/influxdb2
+    networks:
+      - grafana_grafana
+      - metrics
+
+networks:
+  grafana_grafana:
+    external: true
+    name: grafana_grafana
+  metrics:
+    driver: bridge
