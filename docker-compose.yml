@@ -10,7 +10,11 @@ services:
     networks:
       - grafana_grafana
       - metrics
-
+    environment:
+      DOCKER_INFLUXDB_INIT_USERNAME: krjnk
+      DOCKER_INFLUXDB_INIT_PASSWORD: jelen666
+      DOCKER_INFLUXDB_INIT_ORG: KRNJCORP
+      DOCKER_INFLUXDB_INIT_BUCKET: test
 networks:
   grafana_grafana:
     external: true
