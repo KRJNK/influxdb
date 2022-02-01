@@ -1,3 +1,6 @@
+# To do:
+# Config File needs to be edited to allow access via docker network
+# Telegraf to be installed
 version: "3.9"
 services:
   influxdb:
